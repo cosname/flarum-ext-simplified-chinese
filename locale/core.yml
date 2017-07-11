@@ -461,23 +461,23 @@ core:
 
     # These translations are used in emails sent when users register new accounts.
     activate_account:
-      subject: 激活你的账号
+      subject: 激活账号
       body: |
         嘿~
 
-        {username} 想通过这个邮箱在 {forum} 注册账号。（真希望是你！）
+        {username} 想通过这个邮箱在 {forum} 注册账号。（但愿是你！）
 
-        如果是你注册的，只需打开下面的链接即可完成账号激活。
+        如果确定是你的操作，只需打开下面的链接即可完成账号激活。
 
         {url}
 
-        如果你感到莫名其妙，请忽略这封邮件。
+        如果不明所以，请忽略这封邮件。
 
     # These translations are used in emails sent when users change their email address.
     confirm_email:
       subject: 确认邮箱地址
       body: |
-        Hey {username} !
+        嘿 {username} !
 
         有人想更换你在 {forum} 的邮箱地址。（但愿是你！）
 
@@ -491,9 +491,9 @@ core:
     reset_password:
       subject: => core.ref.reset_your_password
       body: |
-        Hey {username} !
+        嘿 {username} !
 
-        有人想要重置你在 {forum} 的登入密码。（真希望是你！）
+        有人想要重置你在 {forum} 的登入密码。（但愿是你！）
 
         如果确定是你的操作，只需打开下面的链接即可完成重置密码。
 
