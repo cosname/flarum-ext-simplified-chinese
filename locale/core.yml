@@ -195,6 +195,7 @@ core:
       exit_full_screen_tooltip: 还原窗口
       full_screen_tooltip: 最大化
       minimize_tooltip: 最小化
+      preview_tooltip: 预览
 
     # These translations are used by the composer when starting a discussion.
     composer_discussion:
