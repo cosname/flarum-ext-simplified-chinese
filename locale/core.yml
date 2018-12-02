@@ -148,7 +148,7 @@ core:
       sign_up_label: 注册账户
       start_discussions_label: 发布话题
       view_discussions_label: 浏览话题
-      view_post_ips_label: 查看发表 IP 地址
+      view_post_ips_label: 查看话题发布的 IP 地址
       view_user_list_label: 查看用户资料
 
     # These translations are used in the dropdown menus on the Permissions page.
@@ -311,7 +311,7 @@ core:
 
     # These translations are used by tooltips displayed for individual posts.
     post:
-      edited_text: 编辑
+      edited_text: 已编辑
       edited_tooltip: "{username} 编辑于 {ago}"
       number_tooltip: "发表 #{number}"
 
@@ -332,7 +332,7 @@ core:
     # These translations are displayed between posts in the post stream.
     post_stream:
       discussion_renamed_old_text: "原标题：{old}"
-      discussion_renamed_text: "{username} 修改标题成 {new}"
+      discussion_renamed_text: "{username} 将标题修改为 {new}"
       load_more_button: => core.ref.load_more
       reply_placeholder: => core.ref.write_a_reply
       time_lapsed_text: "{period} 后"
@@ -456,7 +456,7 @@ core:
 
   # Translations in this namespace are used in messages output by the API.
   api:
-    invalid_username_message: "用户名只能含有字母、数字、连字符"
+    invalid_username_message: "用户名只能包含字母、数字和连字符。"
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
