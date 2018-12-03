@@ -28,7 +28,7 @@ sijad-links:
 
     # These strings are used in the navigation bar.
     nav:
-      links_button: => sijad-links.ref.links
+      links_button: 链接管理
       links_text: 管理导航栏链接。
 
   # Strings in this namespace are referenced by two or more unique keys.
