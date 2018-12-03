@@ -50,5 +50,5 @@ flarum-subscriptions:
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
     follow: 关注
-    following: 关注中
+    following: 关注
     ignoring: 忽略
