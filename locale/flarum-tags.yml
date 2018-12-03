@@ -13,7 +13,7 @@ flarum-tags:
 
     # These translations are used in the Edit Tag modal dialog.
     edit_tag:
-      color_label: 颜色
+      color_label: => core.ref.color
       delete_tag_button: 删除分类
       delete_tag_confirmation: "你确定删除这个分类吗？删除后该分类中的话题不会被删除。"
       description_label: 描述
@@ -71,6 +71,9 @@ flarum-tags:
     discussion_controls:
       edit_tags_button: 修改分类
 
+    header:
+      back_to_tags_tooltip: 返回节点列表
+
     # These translations are used on the index page, peripheral to the discussion list.
     index:
       more_link: 更多...
@@ -91,7 +94,7 @@ flarum-tags:
     deleted_tag_text: 已删除
 
   ##
-  # REUSED STRINGS - These keys should not be used directly in code!
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
   ##
 
   # Translations in this namespace are referenced by two or more unique keys.

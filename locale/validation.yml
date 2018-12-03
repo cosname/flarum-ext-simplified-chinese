@@ -27,6 +27,16 @@ validation:
   exists: "选择的 :attribute 无效"
   file: ":attribute 必须是个有效文件"
   filled: ":attribute 必须是个有效值"
+  gt:
+    numeric: ":attribute 必须大于 :value"
+    file: ":attribute 必须大于 :value KB"
+    string: ":attribute 必须多于 :value 个字符"
+    array: ":attribute 必须多于 :value 项"
+  gte:
+    numeric: ":attribute 必须不小于 :value"
+    file: ":attribute 必须不小于 :value KB"
+    string: ":attribute 必须不少于 :value 个字符"
+    array: ":attribute 必须不少于 :value 项"
   image: ":attribute 只能是图像"
   in: "选择的 :attribute 无效"
   in_array: ":attribute 在 :other 中不存在"
@@ -35,6 +45,16 @@ validation:
   ipv4: ":attribute 必须是有效的 IPv4 地址"
   ipv6: ":attribute 必须是有效的 IPv6 地址"
   json: ":attribute 必须是有效的 JSON 字符串"
+  lt:
+    numeric: ":attribute 必须小于 :value"
+    file: ":attribute 必须小于 :value KB"
+    string: ":attribute 必须少于 :value 个字符"
+    array: ":attribute 必须少于 :value 项"
+  lte:
+    numeric: ":attribute 必须不大于 :value"
+    file: ":attribute 必须不大于 :value KB"
+    string: ":attribute 必须不多于 :value 个字符"
+    array: ":attribute 必须不多于 :value 项"
   max:
     numeric: ":attribute 不能超过 :max."
     file: ":attribute 不能大于 :maxKB"
@@ -48,6 +68,7 @@ validation:
     string: ":attribute 至少有 :min 个字符"
     array: ":attribute 至少有 :min 个"
   not_in: "选择的 :attribute 无效"
+  not_regex: ":attribute 格式无效"
   numeric: ":attribute 只能是一个数字"
   present: ":attribute 必须存在一个值"
   regex: ":attribute 格式无效"
@@ -69,6 +90,7 @@ validation:
   unique: ":attribute 已经存在"
   uploaded: ":attribute 上传失败"
   url: ":attribute 格式无效"
+  uuid: ":attribute 必须是有效的 UUID"
 
   attributes:
     username: 用户名

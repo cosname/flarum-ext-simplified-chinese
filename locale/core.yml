@@ -19,13 +19,16 @@ core:
       colored_header_label: 彩色导航
       colors_heading: 颜色
       colors_text: "选择两种颜色作为主题色。第一种将用于突出显示的颜色，第二种将作为背景等元素的色调。"
+      custom_footer_heading: 自定义尾部
+      custom_footer_text: => core.ref.custom_footer_text
       custom_header_heading: 自定义头部
-      custom_header_text: "添加 HTML 代码作为页面头部，显示在站点标题上方。"
+      custom_header_text: => core.ref.custom_header_text
       custom_styles_heading: 自定义样式
       custom_styles_text: 添加 LESS/CSS 代码以生成自定义样式作为默认外观。
       dark_mode_label: 夜间模式
       edit_css_button: 编辑样式代码
-      edit_header_button: 编辑自定义头部
+      edit_footer_button: => core.ref.custom_footer_title
+      edit_header_button: => core.ref.custom_header_title
       enter_hex_message: 请输入一个十六进制颜色代码。
       favicon_heading: Favicon
       favicon_text: 上传 Favicon 图片作为站点徽标展示。
@@ -50,14 +53,8 @@ core:
 
     # These translations are used in the Dashboard page.
     dashboard:
-      beta_warning_text: "这是一个 <strong>测试版</strong> 程序，不建议你用于正式的生产环境中。"
-      contributing_text: "想要贡献？ 阅读 <a>贡献文档</a> 。"
-      extension_text: "想要开发拓展？ 阅读 <a>拓展文档</a> 。"
-      features_text: "有好的主意来改善功能？请来这告诉我们 <a>特性标签</a> 。"
-      support_text: "找到一个Bug？ 请在这里反馈 <a>支持标签</a> 。"
-      troubleshooting_text: "有问题吗？ 请阅读 <a>故障排除文档</a> 。"
-      version_text: "感谢你使用 Flarum ！ 你正在运行版本是 {version} 。"
-      welcome_text: "欢迎使用 Flarum Beta!"
+      clear_cache_button: 清理缓存
+      tools_button: 工具
 
     # These translations are used in the Edit Custom CSS modal dialog.
     edit_css:
@@ -65,9 +62,15 @@ core:
       submit_button: => core.ref.save_changes
       title: 自定义样式
 
+    # These translations are used in the Edit Custom Footer modal dialog.
+    edit_footer:
+      customize_text: => core.ref.custom_footer_text
+      submit_button: => core.ref.save_changes
+      title: => core.ref.custom_footer_title
+
     # These translations are used in the Edit Group modal dialog.
     edit_group:
-      color_label: 颜色
+      color_label: => core.ref.color
       delete_button: 删除用户组
       delete_confirmation: "确定删除这个用户组？该用户组中的用户不会被删除。"
       icon_label: 图标
@@ -80,9 +83,9 @@ core:
 
     # These translations are used in the Edit Custom Header modal dialog.
     edit_header:
-      customize_text: "添加 HTML 代码作为页面头部，显示在站点标题上方。"
+      customize_text: => core.ref.custom_header_text
       submit_button: => core.ref.save_changes
-      title: 编辑自定义头部
+      title: => core.ref.custom_header_title
 
     # These translations are used in the email page of the admin interface.
     email:
@@ -131,13 +134,14 @@ core:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      allow_renaming_label: 修改标题
       allow_post_editing_label: 修改内容
+      allow_renaming_label: 修改标题
       create_heading: 话题相关
       delete_discussions_forever_label: 永久删除话题
       delete_discussions_label: 删除话题
       delete_posts_forever_label: 永久删除回复
-      edit_and_delete_posts_label: 编辑或删除回复
+      delete_posts_label: 删除回复
+      edit_posts_label: 编辑回复
       global_heading: 全局
       moderate_heading: 管理相关
       new_group_button: 新用户组
@@ -148,6 +152,7 @@ core:
       sign_up_label: 注册账户
       start_discussions_label: 发布话题
       view_discussions_label: 浏览话题
+      view_last_seen_at_label: 查看用户最后活跃时间
       view_post_ips_label: 查看话题发布的 IP 地址
       view_user_list_label: 查看用户资料
 
@@ -168,18 +173,18 @@ core:
 
     # These translations are used in image upload buttons.
     upload_image:
-      remove_button: 移除
-      upload_button: 选择图片
+      remove_button: => core.ref.remove
+      upload_button: 选择图片...
 
   # Translations in this namespace are used by the forum user interface.
   forum:
 
     # These translations are used in the Change Email modal dialog.
     change_email:
-      confirmation_message: => core.ref.confirmation_email_sent
       confirm_password_placeholder: => core.ref.confirm_password
+      confirmation_message: => core.ref.confirmation_email_sent
       dismiss_button: => core.ref.okay
-      incorrect_password_message: 这个密码有误!
+      incorrect_password_message: 密码有误！
       submit_button: => core.ref.save_changes
       title: => core.ref.change_email
 
@@ -296,7 +301,7 @@ core:
       forgot_password_link: "忘记了密码？"
       invalid_login_message: 登入信息有误
       password_placeholder: => core.ref.password
-      remember_me_label: 自动登入
+      remember_me_label: 记住登入信息
       sign_up_text: "还没有注册？ <a>注册</a>"
       submit_button: => core.ref.log_in
       title: => core.ref.log_in
@@ -340,14 +345,14 @@ core:
 
     # These translations are used by the rename discussion modal.
     rename_discussion:
-      title: 修改标题
       submit_button: => core.ref.rename
+      title: 修改标题
 
     # These translations are used by the search results dropdown list.
     search:
       all_discussions_button: '所有话题中搜索 "{query}"'
       discussions_heading: => core.ref.discussions
-      users_heading: 用户
+      users_heading: => core.ref.users
 
     # These translations are used in the Settings page.
     settings:
@@ -364,8 +369,8 @@ core:
 
     # These translations are used in the Sign Up modal dialog.
     sign_up:
-      email_placeholder: => core.ref.email
       dismiss_button: => core.ref.okay
+      email_placeholder: => core.ref.email
       log_in_text: "已经注册过了？ <a>登入</a>"
       password_placeholder: => core.ref.password
       submit_button: => core.ref.sign_up
@@ -375,16 +380,16 @@ core:
 
     # These translations are used in the user profile page and profile popup.
     user:
-      avatar_remove_button: 移除
+      avatar_remove_button: => core.ref.remove
       avatar_upload_button: 上传
       avatar_upload_tooltip: 上传新头像
-      bio_placeholder: 写点什么介绍下自己吧
       discussions_link: => core.ref.discussions
       in_discussion_text: "{discussion}"
       joined_date_text: "加入于 {ago}"
       online_text: 在线
+      posts_empty_text: 空空如也，何不创作一个？
+      posts_link: => core.ref.posts
       posts_load_more_button: => core.ref.load_more
-      posts_link: 回复
       settings_link: => core.ref.settings
 
     # These translations are found on the user profile page (admin function).
@@ -407,16 +412,12 @@ core:
     badge:
       hidden_tooltip: 隐藏
 
-    # These translations are used to modify usernames.
-    username:
-      deleted_user_text: "[已销户]"
-
     # These translations are displayed as error messages.
     error:
-      generic_message: "网络不太顺，请再试一次。"
+      generic_message: "页面出现错误，请刷新重试。"
       not_found_message: 没有这个页面
-      permission_denied_message: 好像不能进行此操作
-      rate_limit_exceeded_message: 你的操作太频繁了，请等一会儿。
+      permission_denied_message: 你没有权限进行此项操作
+      rate_limit_exceeded_message: 你的操作太频繁了，请稍等一会儿。
 
     # These translations are used as suffixes when abbreviating numbers.
     number_suffix:
@@ -429,30 +430,49 @@ core:
       three_text: "{first}, {second}, 还有 {third}"
       two_text: "{first} 和 {second}"
 
+    # These translations are used to modify usernames.
+    username:
+      deleted_user_text: "[已销户]"
+
   # Translations in this namespace are used in views other than Flarum's normal JS client.
   views:
 
     # Translations in this namespace are displayed by the basic HTML content loader.
     content:
       javascript_disabled_message: 使用更先进的浏览器访问效果更佳。
-      load_error_message: 加载出错，请刷新页面或更换浏览请再试。
-      loading_text: 正在载入
+      load_error_message: 无法加载完整的页面，请刷新页面重试。
+      loading_text: 正在载入...
 
     # Translations in this namespace are displayed in the basic HTML discussion view.
     discussion:
       next_page_button: => core.ref.next_page
-      previous_page_button: 上一页
+      previous_page_button: => core.ref.previous_page
+
+    # Translations in this namespace are displayed when Flarum encounters an error.
+    error:
+      403_message: 没有权限访问该页面。
+      404_message: 无法找到该页面。
+      404_return_link: "返回 {forum}"
+      500_message: 加载页面时出错
+      503_message: "{forum} 正在进行维护，请耐心等待。"
 
     # Translations in this namespace are displayed by the basic HTML discussion index.
     index:
       all_discussions_heading: => core.ref.all_discussions
       next_page_button: => core.ref.next_page
+      previous_page_button: => core.ref.previous_page
+
+    # Translations in this namespace are displayed by the Log Out confirmation interface.
+    log_out:
+      log_out_button: => core.ref.log_out
+      log_out_confirmation: "是否确定要登出 {forum}？"
+      title: => core.ref.log_out
 
     # Translations in this namespace are displayed by the Reset Password interface.
-    reset:
-      confirm_password_label: => core.ref.confirm_password
-      password_label: => core.ref.password
-      submit_button: 重置密码
+    reset_password:
+      confirm_password_label: 确认新密码
+      new_password_label: 新密码
+      submit_button: => core.ref.save_changes
       title: => core.ref.reset_your_password
 
   # Translations in this namespace are used in messages output by the API.
@@ -514,11 +534,16 @@ core:
     all_discussions: 所有话题
     change_email: 更换邮箱
     change_password: 更改密码
+    color: 颜色                                 # Referenced by flarum-tags.yml
     confirm_password: 确认密码
     confirmation_email_sent: "我们已经发送了一封邮件至 {email}，请打开它并完成账号激活。"
+    custom_footer_text: 添加 HTML 到页面尾部。
+    custom_footer_title: 编辑自定义尾部
+    custom_header_text: "添加 HTML 到页面头部、Flarum 自身的头部之前。"
+    custom_header_title: 编辑自定义头部
     delete: 删除
     delete_forever: 永久删除
-    discussions: 话题
+    discussions: 话题                     # Referenced by flarum-statistics.yml
     edit: 编辑
     email: 邮箱
     load_more: 载入更多
@@ -529,6 +554,9 @@ core:
     notifications: 消息通知
     okay: 完成                                     # Referenced by flarum-tags.yml
     password: 密码
+    posts: 帖子                                 # Referenced by flarum-statistics.yml
+    previous_page: 上一页
+    remove: 移除
     rename: 更改标题
     reply: 回复                                # Referenced by flarum-mentions.yml
     reset_your_password: 重置密码
@@ -536,9 +564,10 @@ core:
     save_changes: 保存更改                  # Referenced by flarum-suspend.yml, flarum-tags.yml
     settings: 个人设置
     sign_up: 注册
-    start_a_discussion: 新的话题
     some_others: "{count} 人|{count} 人"  # Referenced by flarum-likes.yml, flarum-mentions.yml
+    start_a_discussion: 新的话题
     username: 用户名
+    users: 用户                                 # Referenced by flarum-statistics.yml
     write_a_reply: 说点什么...
     you: 你                                     # Referenced by flarum-likes.yml, flarum-mentions.yml
 
